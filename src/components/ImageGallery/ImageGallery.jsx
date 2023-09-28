@@ -1,15 +1,17 @@
 import { Component } from 'react';
 import { ImageGalleryList } from './ImageGallery.styled';
+import { getImages } from 'services/getImages';
 
 export class ImageGallery extends Component {
   state = {};
 
   componentDidUpdate(prevProps, prevState) {
+    console.log(this.props);
     if (
       this.state.page !== prevState.page ||
-      this.state.query !== prevState.query
+      prevProps.searchText !== this.props.searchText
     ) {
-      fetch();
+      getImages(this.props.searchText);
     }
   }
 
