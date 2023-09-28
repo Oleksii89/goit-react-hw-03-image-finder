@@ -9,7 +9,14 @@ export class App extends Component {
 
   // componentDidMount() { }
 
-  // componentDidUpdate(prevProps, prevState) { }
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      this.state.page !== prevState.page ||
+      this.state.query !== prevState.query
+    ) {
+      fetch();
+    }
+  }
 
   render() {
     return (
