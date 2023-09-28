@@ -12,8 +12,7 @@ export class Searchbar extends Component {
   state = { value: '' };
 
   handleChange = evt => {
-    this.setState({ value: evt.target.value });
-    console.log(this.state);
+    this.setState({ value: evt.target.value.toLowerCase() });
   };
 
   handleSubmit = evt => {

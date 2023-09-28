@@ -7,17 +7,6 @@ import { Component } from 'react';
 export class App extends Component {
   state = {};
 
-  // componentDidMount() { }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (
-      this.state.page !== prevState.page ||
-      this.state.query !== prevState.query
-    ) {
-      fetch();
-    }
-  }
-
   render() {
     return (
       <div>
