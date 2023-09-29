@@ -1,5 +1,9 @@
-import { ButtonLoadMore } from './Button.styled';
+import { StyledButtonLoadMore } from './Button.styled';
 
-export const Button = () => {
-  return <ButtonLoadMore></ButtonLoadMore>;
+export const Button = ({ children, onClick }) => {
+  return (
+    <StyledButtonLoadMore type="button" onClick={onClick}>
+      {children}
+    </StyledButtonLoadMore>
+  );
 };

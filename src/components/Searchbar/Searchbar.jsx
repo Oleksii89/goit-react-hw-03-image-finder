@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import {
-  SearchForm,
-  SearchFormButton,
-  SearchFormButtonLabel,
-  SearchFormInput,
-  SearchbarHeader,
+  StyledSearchForm,
+  StyledSearchFormButton,
+  StyledSearchFormButtonLabel,
+  StyledSearchFormInput,
+  StyledSearchbarHeader,
 } from './Searchbar.styled';
 import { FcSearch } from 'react-icons/fc';
 
@@ -22,14 +22,14 @@ export class Searchbar extends Component {
 
   render() {
     return (
-      <SearchbarHeader>
-        <SearchForm onSubmit={this.handleSubmit}>
-          <SearchFormButton>
-            <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+      <StyledSearchbarHeader>
+        <StyledSearchForm onSubmit={this.handleSubmit}>
+          <StyledSearchFormButton>
+            <StyledSearchFormButtonLabel>Search</StyledSearchFormButtonLabel>
             <FcSearch size="24" />
-          </SearchFormButton>
+          </StyledSearchFormButton>
 
-          <SearchFormInput
+          <StyledSearchFormInput
             type="text"
             autoComplete="off"
             autoFocus
@@ -37,8 +37,8 @@ export class Searchbar extends Component {
             onChange={this.handleChange}
             value={this.state.value}
           />
-        </SearchForm>
-      </SearchbarHeader>
+        </StyledSearchForm>
+      </StyledSearchbarHeader>
     );
   }
 }
