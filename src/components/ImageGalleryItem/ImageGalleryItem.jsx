@@ -3,10 +3,13 @@ import {
   ImageGalleryItemLi,
 } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = () => {
+export const ImageGalleryItem = ({ item }) => {
+  const { tags, webformatURL } = item;
   return (
     <ImageGalleryItemLi>
-      <ImageGalleryItemImg src="" alt="" />
+      <div>
+        <ImageGalleryItemImg src={webformatURL} alt={tags} />
+      </div>
     </ImageGalleryItemLi>
   );
 };

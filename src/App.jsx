@@ -1,4 +1,5 @@
 // import { Button } from 'components/Button/Button';
+import { StyledAppContainer } from 'App.styled';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 import { Searchbar } from 'components/Searchbar/Searchbar';
@@ -15,13 +16,13 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <StyledAppContainer>
         <Searchbar handleSearch={this.handleSearch} />
         <ImageGallery searchText={this.state.searchText}>
           <ImageGalleryItem></ImageGalleryItem>
         </ImageGallery>
         {/* <Button></Button> */}
-      </div>
+      </StyledAppContainer>
     );
   }
 }
