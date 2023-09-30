@@ -17,5 +17,5 @@ export const findImagesByText = async (searchText, page = 1) => {
     `https://pixabay.com/api/?q=${searchText}&page=${page}&key=38828352-a415a8248b03313c93049703f&image_type=photo&orientation=horizontal&per_page=12`
   );
   console.log(data.hits);
-  return data.hits;
+  return data;
 };

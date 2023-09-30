@@ -4,7 +4,7 @@ import { findImagesByText } from 'services/api';
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 import { Loader } from 'components/Loader/Loader';
 import { Button } from 'components/Button/Button';
-import { Erorr, Error } from 'components/Error/Error';
+import { Error } from 'components/Error/Error';
 
 export class ImageGallery extends Component {
   state = {
