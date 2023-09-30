@@ -3,10 +3,14 @@ import {
   StyledImageGalleryItemImg,
 } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = ({ item }) => {
-  const { tags, webformatURL } = item;
+export const ImageGalleryItem = ({ item, onOpenModal }) => {
+  const { largeImageURL, tags, webformatURL } = item;
   return (
-    <StyledImageGalleryItem>
+    <StyledImageGalleryItem
+      onClick={() => {
+        onOpenModal({ largeImageURL, tags });
+      }}
+    >
       <div>
         <StyledImageGalleryItemImg
           src={webformatURL}

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-export const Modal = styled.div`
+export const StyledModal = styled.div`
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
 `;
 
-export const OverlayForModal = styled.div`
+export const StyledOverlayForModal = styled.div`
   position: fixed;
   top: 0;
   left: 0;

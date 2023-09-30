@@ -21,7 +21,6 @@ export class App extends Component {
         <ImageGallery searchText={this.state.searchText}>
           <ImageGalleryItem></ImageGalleryItem>
         </ImageGallery>
-        {/* <Button></Button> */}
       </StyledAppContainer>
     );
   }
