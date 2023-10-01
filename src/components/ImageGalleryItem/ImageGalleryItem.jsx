@@ -3,12 +3,12 @@ import {
   StyledImageGalleryItemImg,
 } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = ({ item, onOpenModal }) => {
+export const ImageGalleryItem = ({ item, onImage }) => {
   const { largeImageURL, tags, webformatURL } = item;
   return (
     <StyledImageGalleryItem
       onClick={() => {
-        onOpenModal({ largeImageURL, tags });
+        onImage({ largeImageURL, tags });
       }}
     >
       <div>
